@@ -1,5 +1,9 @@
 import React from "react";
 
+import uniqid from 'uniqid';
+
+import {skills, categories } from '../../../portfolio';
+
 import "./ResumePage.css";
 
 const ResumePage = () => {
@@ -93,17 +97,28 @@ const ResumePage = () => {
               <footer></footer>
             </article>
           </section>
-          <section id="skills" className="resume__section">
-          <h3 className="resume__title">Skills</h3>
+          <section id="skill" className="resume__section">
+            <h3 className="resume__title">Skills</h3>
             <article>
               {/* <header>
                 <h4></h4>
                 <p></p>
               </header> */}
-              <ul className="resume__project-list">
-                <li className="resume__project-list-item">
-                  Something big coming here!
-                </li>
+              <ul className="resume__skills">
+                {skills.map((skill, index) => (
+                  <li
+                    key={uniqid()}
+                    style={{
+                      width: `${(skill.competency/5) * 100}%`,
+                      backgroundColor: `${categories.filter((category) => skill.category.includes(category.name))[0].color}`,
+                    }}
+                  >
+                    <p className="resume__skills-title">
+                      {skill.title}
+                      <span className="resume__skills-percent">{`${skill.competency}/5`}</span>
+                    </p>
+                  </li>
+                ))}
               </ul>
               <footer></footer>
             </article>

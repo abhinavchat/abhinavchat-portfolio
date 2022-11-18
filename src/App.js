@@ -6,6 +6,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Index from "./components/Pages/Index/Index";
 import ResumePage from "./components/Pages/Resume/ResumePage";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import "./App.css";
 
 const App = () => {
@@ -19,7 +20,7 @@ const App = () => {
           <Route path="/abhinavchat-portfolio" element={<Index />} />
           <Route path="/resume" element={<ResumePage />} />
         </Routes>
-
+        <ScrollToTop />
         <Footer />
       </div>
     </Router>
