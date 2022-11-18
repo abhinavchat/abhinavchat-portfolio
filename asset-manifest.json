@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/abhinavchat-portfolio/static/css/main.f83c0f4c.css",
-    "main.js": "/abhinavchat-portfolio/static/js/main.9b35ba8e.js",
+    "main.js": "/abhinavchat-portfolio/static/js/main.9a703060.js",
     "index.html": "/abhinavchat-portfolio/index.html",
     "main.f83c0f4c.css.map": "/abhinavchat-portfolio/static/css/main.f83c0f4c.css.map",
-    "main.9b35ba8e.js.map": "/abhinavchat-portfolio/static/js/main.9b35ba8e.js.map"
+    "main.9a703060.js.map": "/abhinavchat-portfolio/static/js/main.9a703060.js.map"
   },
   "entrypoints": [
     "static/css/main.f83c0f4c.css",
-    "static/js/main.9b35ba8e.js"
+    "static/js/main.9a703060.js"
   ]
 }
