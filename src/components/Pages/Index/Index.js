@@ -4,6 +4,7 @@ import Projects from "../../Projects/Projects";
 import Skills from "../../Skills/Skills";
 
 import Contact from "../../Contact/Contact";
+import YouTube from "../../YouTube/YouTube";
 
 const Index = (props) => {
   return (
@@ -12,6 +13,7 @@ const Index = (props) => {
         <About />
         <Projects />
         <Skills />
+        <YouTube />
         <Contact />
       </main>
 

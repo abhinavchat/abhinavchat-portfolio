@@ -1,7 +1,7 @@
 .resume {
   flex-direction: column;
   align-items: center;
-  border: 1px solid var(--clr-fg-alt);
+  /* border: 1px solid var(--clr-fg-alt); */
 }
 
 .resume__name {
@@ -32,6 +32,10 @@
 
 .resume__section {
     margin-top: 5em;
+}
+
+.resume__section article {
+  margin-top: 20px;
 }
 
 .resume__title {

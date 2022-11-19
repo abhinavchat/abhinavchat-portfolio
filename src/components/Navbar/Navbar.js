@@ -1,8 +1,8 @@
 import { useContext, useState } from "react";
-import Brightness2Icon from "@material-ui/icons/Brightness2";
-import WbSunnyRoundedIcon from "@material-ui/icons/WbSunnyRounded";
-import MenuIcon from "@material-ui/icons/Menu";
-import CloseIcon from "@material-ui/icons/Close";
+import Brightness2Icon from '@mui/icons-material/Brightness2';
+import WbSunnyIcon from '@mui/icons-material/WbSunny';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 import { ThemeContext } from "../../contexts/theme";
 import { projects, skills, contact, about } from "../../portfolio";
 import "./Navbar.css";
@@ -46,7 +46,7 @@ const Navbar = () => {
         {about.resume ? (
           <li className="nav__list-item">
             <a
-              href="/resume"
+              href={`${process.env.PUBLIC_URL}/resume`}
               onClick={toggleNavList}
               className="link link--nav"
             >
@@ -74,7 +74,7 @@ const Navbar = () => {
         className="btn btn--icon nav__theme"
         aria-label="toggle theme"
       >
-        {themeName === "dark" ? <WbSunnyRoundedIcon /> : <Brightness2Icon />}
+        {themeName === "dark" ? <WbSunnyIcon /> : <Brightness2Icon />}
       </button>
 
       <button

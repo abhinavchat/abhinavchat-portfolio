@@ -1,16 +1,16 @@
 const header = {
     // all the properties are optional - can be left empty or deleted
-    homepage: '/abhinavchat-portfolio',
+    homepage: process.env.PUBLIC_URL + '/',
     title: 'AC.',
   }
   
   const about = {
     // all the properties are optional - can be left empty or deleted
     name: 'Abhinav Chaturvedi',
-    role: 'Data Engineer',
+    role: 'Senior Consultant | Deep Learning & Data Engineering',
     description:
-      'I’m Abhinav Chaturvedi data engineer & Full stack developer, currently working in Gurugram.',
-    resume: '/resume',
+      'A Data engineer & a Full stack developer, currently working in Gurugram.',
+    resume: process.env.PUBLIC_URL + '/resume',
     social: {
       linkedin: 'https://www.linkedin.com/in/abhinavchat/',
       github: 'https://github.com/abhinavchat',
@@ -21,65 +21,74 @@ const header = {
     // projects can be added an removed
     // if there are no projects, Projects section won't show up
     {
-      name: 'Project 1',
+      name: 'Image Classification',
       description:
-        'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
-      stack: ['SASS', 'TypeScript', 'React'],
-      sourceCode: 'https://github.com',
+        'Classify images into cats or dogs with the help of a pre-trained InceptionV3 model.',
+      stack: ['Flask', 'Python', 'Tensorflow'],
+      sourceCode: 'https://github.com/abhinavchat/image_classification',
       livePreview: 'https://github.com',
     },
     {
-      name: 'Project 2',
+      name: 'IRA Skill',
       description:
-        'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
-      stack: ['SASS', 'TypeScript', 'React'],
-      sourceCode: 'https://github.com',
-      livePreview: 'https://github.com',
+        'In Room Automator is an Alexa skill for hospitality industry specifically hotels.',
+      stack: ['Python', 'Flask-ASK', 'MongoDB', 'AWS Lambda'],
+      sourceCode: 'https://github.com/abhinavchat/ira-skill',
+      livePreview: 'https://github.com/abhinavchat/ira-skill',
     },
     {
-      name: 'Project 3',
+      name: 'Book Store',
       description:
-        'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
-      stack: ['SASS', 'TypeScript', 'React'],
-      sourceCode: 'https://github.com',
-      livePreview: 'https://github.com',
+        'This app could be used to track local library of books. This could be modified to cater to any needs wrt local resource management such as: media management, recipe management, etc.',
+      stack: ['Flask', 'Python', 'HTML', 'CSS'],
+      sourceCode: 'https://github.com/abhinavchat/book-store',
+      livePreview: 'https://github.com/abhinavchat/book-store',
     },
   ]
+
+  const youtube = [
+    // content can be added an removed
+    // if there are no videos, Content section won't show up
+    {
+      title: 'RabbitMQ 101 | Tutorial with Python',
+      embed_url: "https://www.youtube.com/embed/1KYxYIZtpkE"
+    }
+  ];
   
   const skills = [
     {
       title: 'Javascript',
-      competency: 4,
+      competency: 2,
       category: ['Web Development', 'Languages', 'Javascript'],
     },
     {
       title: 'Node.JS',
-      competency: 3,
+      competency: 2,
       category: ['Web Development', 'Javascript'],
     },
     {
       title: 'React',
-      competency: 3,
+      competency: 2,
       category: ['Web Development', 'Javascript'],
     },
     {
       title: 'Bash',
-      competency: 2,
+      competency: 3,
       category: ['Tools', 'Languages'],
     },
     {
       title: 'Amazon Web Services',
-      competency: 4,
-      category: ['Web Development', 'Tools'],
-    },
-    {
-      title: 'Heroku',
       competency: 2,
       category: ['Web Development', 'Tools'],
     },
     {
-      title: 'MongoDB',
+      title: 'Heroku',
       competency: 3,
+      category: ['Web Development', 'Tools'],
+    },
+    {
+      title: 'MongoDB',
+      competency: 2,
       category: ['Web Development', 'Databases'],
     },
     {
@@ -103,16 +112,6 @@ const header = {
       category: ['Data Science'],
     },
     {
-      title: 'Express.JS',
-      competency: 2,
-      category: ['Web Development', 'Javascript'],
-    },
-    {
-      title: 'D3',
-      competency: 2,
-      category: ['Web Development', 'Javascript'],
-    },
-    {
       title: 'Flask',
       competency: 2,
       category: ['Web Development', 'Python'],
@@ -129,12 +128,12 @@ const header = {
     },
     {
       title: 'Kubernetes',
-      competency: 2,
+      competency: 1,
       category: ['Tools', 'Data Engineering'],
     },
     {
       title: 'Google Cloud Compute',
-      competency: 2,
+      competency: 1,
       category: ['Tools', 'Web Development'],
     },
     {
@@ -149,7 +148,7 @@ const header = {
     },
     {
       title: 'Tensorflow + Keras',
-      competency: 3,
+      competency: 4,
       category: ['Data Science', 'Python'],
     },
     {
@@ -159,7 +158,7 @@ const header = {
     },
     {
       title: 'Typescript',
-      competency: 2,
+      competency: 1,
       category: ['Web Development', 'Languages', 'Javascript'],
     },
     {
@@ -173,22 +172,12 @@ const header = {
       category: ['Languages', 'Python'],
     },
     {
-      title: 'C++',
-      competency: 2,
+      title: 'GoLang',
+      competency: 1,
       category: ['Languages'],
     },
     {
-      title: 'Julia',
-      competency: 2,
-      category: ['Languages'],
-    },
-    {
-      title: 'MATLAB',
-      competency: 2,
-      category: ['Languages'],
-    },
-    {
-      title: 'R',
+      title: 'Ruby',
       competency: 2,
       category: ['Languages'],
     },
@@ -196,11 +185,6 @@ const header = {
       title: 'Data Visualization',
       competency: 3,
       category: ['Data Science', 'Javascript'],
-    },
-    {
-      title: 'GraphQL',
-      competency: 2,
-      category: ['Web Development', 'Databases'],
     },
     {
       title: 'Pandas',
@@ -224,13 +208,8 @@ const header = {
     },
     {
       title: 'Spark',
-      competency: 2,
+      competency: 3,
       category: ['Data Engineering', 'Data Science'],
-    },
-    {
-      title: 'Dagster',
-      competency: 2,
-      category: ['Data Engineering', 'Python'],
     },
     {
       title: 'Mypy',
@@ -275,5 +254,5 @@ const header = {
   }
 
   
-  export { header, about, projects, skills, contact, categories }
+  export { header, about, projects, skills, contact, categories, youtube }
   
